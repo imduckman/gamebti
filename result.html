@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang=ko>
+
+  <head>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta http-equiv=X-UA-Compatible content="ie=edge">
+    <meta http-equiv=Content-Security-Policy content=upgrade-insecure-requests>
+
+    <title>GBTI 인생 게임 추천 - 결과</title>
+    <link rel="icon" href="./assets/images/logo.png" type="image/png">
+    
+    <link rel=stylesheet href=https://unpkg.com/swiper/swiper-bundle.min.css>
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css integrity=sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2 crossorigin=anonymous>
+    <link rel=stylesheet href=https://pro.fontawesome.com/releases/v5.10.0/css/all.css integrity=sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p crossorigin=anonymous>
+    <link rel=stylesheet href=./assets/css/style.css>
+    
+    <script src=https://code.jquery.com/jquery-3.5.0.js></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J01BJ2N7EK"></script>
+    <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-J01BJ2N7EK")</script>
+    <script data-ad-client=ca-pub-6017561848628392 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
+  </head>
+  
+
+  <body>
+
+    <article class=result>
+      <div class=se-pre-con>
+        <div class=loader-area>
+          <svg>
+            <rect></rect>
+          </svg>
+        </div>
+      </div>
+      <div class="mt-5 mb-5 result-info" style="display:none;">
+        <div class=result-img>
+          <img id=img src="" alt=game>
+        </div>
+
+        <div class="result-title mt-5 mb-4">
+          <h1 id=game class=text-center></h1>
+        </div>
+        <br>
+
+        <div class="result-explain mt-3">
+          <h3 id=explain class="text-left mt-3">당신은 <span id=desc></span> (<span id=mbti-type></span>)
+            입니다! <br> <br>
+            <span id=genre1></span> <span id=genre></span> <br>
+            <span id=game-rec1></span> <span id=game-rec></span>, <a class=seemoreLink2 onclick=gameDetail()>(더
+              보기)</a> <br><br>
+            <span id=explain1></span> <br><br>
+
+            <p class=comment> <i class="fas fa-info-circle" style=color:#87cefa></i> 참고사항<br>
+              본 테스트 결과는 데이터를 토대로 대략적인 성향을 유추하였으며, 재미로만 즐겨주세요!
+              <br><br>
+            </p>
+          </h3>
+
+          
+          <div class="addthis_inline_share_toolbox mt-4 mb-4"></div>
+          <div class="mb-5 text-center">
+            <img src="./assets/images/end.png" alt="모집 포스터" class="poster-img">
+          </div>
+          <div class=result-buttons>
+            <div class="mt-3 mb-3 retry-button">
+              <button type=button class=retrytest onclick=result16()>다른 유형들 보기</button>
+            </div>
+            <div class="mt-3 mb-5 retry-button">
+              <button type=button class=retrytest onclick=gaReload()>다시하기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </article>
+
+
+
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-601fff2f622dc806"></script>
+    <script src=//t1.daumcdn.net/kas/static/ba.min.js async></script>
+    <script src=https://unpkg.com/swiper/swiper-bundle.min.js></script>
+    <script src=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js integrity=sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx crossorigin=anonymous></script>
+
+    <script src=./assets/js/bg.js></script>
+    <script src=./assets/js/main.js></script>
+    <script src=./assets/js/swiperimg.js></script>
+    <script src=./components/load.js></script>
+    <script>
+      // jQuery 준비 확인 후 데이터 로드
+      function loadResultData() {
+        console.log("=== loadResultData 함수 시작 ===");
+        
+        var mbti = localStorage.getItem("mbti");
+        var resultDataStr = localStorage.getItem("resultData");
+        
+        console.log("localStorage MBTI:", mbti);
+        console.log("localStorage resultData 존재:", !!resultDataStr);
+        
+        if (!resultDataStr) {
+          console.error("❌ localStorage에 resultData가 없습니다!");
+          alert("결과 데이터가 없습니다. 퀴즈를 다시 시작해주세요.");
+          // 로더 숨기기
+          var loader = document.querySelector(".se-pre-con");
+          if (loader) loader.style.display = "none";
+          return;
+        }
+        
+        try {
+          var resultData = JSON.parse(resultDataStr);
+          console.log("✅ 결과 데이터 파싱 성공");
+          console.log("resultData:", resultData);
+          
+          // 각 요소 확인 및 데이터 설정
+          var elements = {
+            "img": resultData.img,
+            "game": resultData.game,
+            "desc": resultData.desc,
+            "mbti-type": resultData["mbti-type"],
+            "genre1": resultData.genre1,
+            "genre": resultData.genre,
+            "game-rec1": resultData["game-rec1"],
+            "game-rec": resultData["game-rec"],
+            "explain1": resultData.explain1,
+            "other-game1": resultData["other-game1"]
+          };
+          
+          for (var id in elements) {
+            var elem = document.getElementById(id);
+            if (!elem) {
+              console.error("❌ 요소를 찾을 수 없음:", id);
+              continue;
+            }
+            
+            if (id === "img") {
+              elem.src = elements[id];
+              console.log("✅ 이미지 설정:", id, "→", elements[id]);
+            } else {
+              elem.innerHTML = elements[id];
+              console.log("✅ 내용 설정:", id);
+            }
+          }
+          
+          // 캐러셀 이미지 설정
+          for (var i = 1; i <= 5; i++) {
+            var imgElem = document.getElementById("img" + i);
+            if (imgElem) {
+              imgElem.src = resultData["img" + i];
+              console.log("✅ 캐러셀 이미지 설정: img" + i, "→", resultData["img" + i]);
+            }
+          }
+          
+          console.log("✅ 모든 데이터 로드 완료");
+          
+          // 로더 숨기고 결과 표시
+          var loader = document.querySelector(".se-pre-con");
+          var resultInfo = document.querySelector(".result-info");
+          
+          if (loader) {
+            loader.style.display = "none";
+            console.log("✅ 로더 숨김");
+          }
+          
+          if (resultInfo) {
+            resultInfo.style.display = "block";
+            console.log("✅ 결과 화면 표시");
+          }
+          
+        } catch (e) {
+          console.error("❌ JSON 파싱 오류:", e);
+          alert("데이터 로드 중 오류가 발생했습니다: " + e.message);
+          
+          // 로더 숨기기
+          var loader = document.querySelector(".se-pre-con");
+          if (loader) loader.style.display = "none";
+        }
+      }
+      
+      // 페이지 로드 완료 후 데이터 로드
+      console.log("=== result.html 스크립트 로드 ===");
+      console.log("document.readyState:", document.readyState);
+      
+      // result 요소를 즉시 표시
+      var resultArticle = document.querySelector(".result");
+      if (resultArticle) {
+        resultArticle.style.display = "block";
+        console.log("✅ result 요소 표시");
+      }
+      
+      if (document.readyState === 'loading') {
+        console.log("⏳ DOM 로딩 대기 중...");
+        document.addEventListener('DOMContentLoaded', function() {
+          console.log("✅ DOM 로드 완료");
+          setTimeout(loadResultData, 500);
+        });
+      } else {
+        console.log("✅ DOM 이미 로드됨");
+        setTimeout(loadResultData, 500);
+      }
+    </script>
+
+  </body>
+</html>

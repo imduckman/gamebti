@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang=ko>
+
+  <head>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta http-equiv=X-UA-Compatible content="ie=edge">
+    <meta http-equiv=Content-Security-Policy content=upgrade-insecure-requests>
+
+    <title>GBTI 전체 결과 - 16가지 유형</title>
+    <link rel="icon" href="./assets/images/logo.png" type="image/png">
+    
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css integrity=sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2 crossorigin=anonymous>
+    <link rel=stylesheet href=https://pro.fontawesome.com/releases/v5.10.0/css/all.css integrity=sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p crossorigin=anonymous>
+    <link rel=stylesheet href=./assets/css/style.css>
+    
+    <script src=https://code.jquery.com/jquery-3.5.0.js></script>
+  </head>
+
+  <body>
+    <section class="all-results">
+      <div class="container-fluid px-5 mt-5 mb-5">
+        <h1 class="text-center mb-5">
+          <span class=title-hgl>GBTI</span> 16가지 유형별 게임 추천
+        </h1>
+        
+        <div id="results-grid" class="row">
+          <!-- JavaScript로 동적 생성 -->
+        </div>
+
+        <div class="text-center mt-5 mb-5">
+          <button type=button class="starttest" onclick="location.href='./quiz.html'">
+            <i class="fas fa-redo"></i>테스트 하러가기
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src=./assets/js/main.js></script>
+    <script>
+      // main.js의 result 객체에서 데이터 가져오기
+      const mbtiTypes = ['INTJ', 'INTP', 'ENTJ', 'ENTP', 'INFJ', 'INFP', 'ENFJ', 'ENFP', 
+                         'ISTJ', 'ISFJ', 'ESTJ', 'ESFJ', 'ISTP', 'ISFP', 'ESTP', 'ESFP'];
+      
+      const resultsGrid = document.getElementById('results-grid');
+      
+      mbtiTypes.forEach(type => {
+        const data = result[type];
+        if (data) {
+          const col = document.createElement('div');
+          col.className = 'col-sm-6 col-md-4 col-lg-3 mb-4';
+          
+          const imgPath = data.img.replace('image/', './assets/images/');
+          
+          col.innerHTML = `
+            <div class="card h-100 result-card" onclick="viewResult('${type}')">
+              <img src="${imgPath}" class="card-img-top" alt="${data.game}">
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-center mb-3">${type}</h5>
+                <p class="card-text text-center mb-2" style="color: #aaa; font-size: 0.95rem;">
+                  ${data.desc}
+                </p>
+                <p class="card-text text-center mt-auto">
+                  <strong style="font-size: 1.1rem;">${data.game}</strong>
+                </p>
+              </div>
+            </div>
+          `;
+          
+          resultsGrid.appendChild(col);
+        }
+      });
+      
+      function viewResult(mbtiType) {
+        // localStorage에 MBTI 타입 저장
+        localStorage.setItem('mbti', mbtiType);
+        
+        // result 데이터 변환 및 저장
+        const resultData = JSON.parse(JSON.stringify(result[mbtiType]));
+        resultData.img = resultData.img.replace('image/', './assets/images/');
+        resultData.img1 = resultData.img1.replace('image/', './assets/images/');
+        resultData.img2 = resultData.img2.replace('image/', './assets/images/');
+        resultData.img3 = resultData.img3.replace('image/', './assets/images/');
+        resultData.img4 = resultData.img4.replace('image/', './assets/images/');
+        resultData.img5 = resultData.img5.replace('image/', './assets/images/');
+        
+        localStorage.setItem('resultData', JSON.stringify(resultData));
+        
+        // 결과 페이지로 이동
+        location.href = './result.html';
+      }
+    </script>
+
+    <style>
+      .all-results {
+        min-height: 100vh;
+        padding: 2rem 0;
+      }
+      
+      .all-results h1 {
+        color: white;
+        font-weight: bold;
+      }
+      
+      .result-card {
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border-radius: 15px;
+        overflow: hidden;
+        border: none;
+        box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.05),
+                    5px 5px 15px rgba(0, 0, 0, 0.5);
+        background: #1e1e1e;
+      }
+      
+      .result-card:hover {
+        transform: translateY(-10px);
+        box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1),
+                    8px 8px 20px rgba(0, 0, 0, 0.7);
+      }
+      
+      .result-card img {
+        height: 200px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+      
+      .result-card:hover img {
+        transform: scale(1.05);
+      }
+      
+      .result-card .card-body {
+        background: #1e1e1e;
+        color: white;
+      }
+      
+      .result-card .card-title {
+        font-weight: bold;
+        color: white;
+      }
+      
+      .result-card .card-text {
+        color: #ccc;
+      }
+      
+      .result-card .card-text strong {
+        color: white;
+      }
+      
+      .badge-dark {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+    </style>
+  </body>
+</html>

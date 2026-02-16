@@ -1,0 +1,80 @@
+
+<!doctype html>
+<html lang=ko>
+
+  <head>
+    <meta charset=UTF-8>
+    <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+    <meta http-equiv=X-UA-Compatible content="ie=edge">
+    <meta http-equiv=Content-Security-Policy content=upgrade-insecure-requests>
+    <meta name=title content="GBTI별 인생 게임 추천">
+    <meta name=subject content="GBTI 성격 유형을 통해, 나의 인생 게임을 찾으세요!">
+    <meta name=keywords content="GBTI, 겜bti, 성격 유형별 게임 추천, mbti별 게임 추천, 인생 게임 추천,  mbti 유형별 게임 추천, mbti, pc게임 추천, 모바일 게임 추천, rpg 게임 추천, 심리 테스트, 성격 테스트, 나랑 가장 잘 맞는 게임, 인생 게임, 나를 위한 게임, game for me">
+    <meta name=author content=GuardiansofPru>
+    <meta name=description content="게임 MBTI GBTI 유형을 통해 인생 게임을 추천 받으세요! PC게임, 모바일게임, 스팀게임등 다양한 게임을 추천드립니다.">
+    <link rel=canonical href=https://www.gameforme.site/ >
+    <meta property=og:url content=https://www.gameforme.site/ >
+    <meta property=og:type content=website>
+    <meta property=og:title content="GBTI 인생 게임 추천">
+    <meta property=og:description content="GBTI 성격 유형을 통해 인생 게임을 추천 받으세요! PC게임, 모바일게임, 스팀게임등 다양한 게임을 추천드립니다.">
+    <meta property=og:image content=https://i.ibb.co/4tpYD1P/gameformeog.png>
+
+    <title>GBTI 인생 게임 추천 - 퀴즈</title>
+    <link rel="icon" href="./assets/images/logo.png" type="image/png">
+    <link rel=stylesheet href=https://unpkg.com/swiper/swiper-bundle.min.css>
+
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css integrity=sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2 crossorigin=anonymous>
+    <link rel=stylesheet href=https://pro.fontawesome.com/releases/v5.10.0/css/all.css integrity=sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p crossorigin=anonymous>
+    <script src=http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js></script>
+    <script src=https://code.jquery.com/jquery-3.5.0.js></script>
+    <link rel=stylesheet href=./assets/css/style.css>
+    <meta name=naver-site-verification content=7499b946955556972b26be8c6ebf8f95f4534e5b>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J01BJ2N7EK"></script>
+    <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-J01BJ2N7EK")</script>
+    <script data-ad-client=ca-pub-6017561848628392 async src=https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js></script>
+  </head>
+  
+
+  <body>
+
+    <article class=question>
+      <div class="mx-5 progress">
+        <div class=progress-bar role=progressbar style=width:calc(100/20*1%)>
+        </div>
+      </div>
+      
+      <h2 id=q-title class="container mt-3 mb-3 px-0">문제</h2>
+      <input id=type type=hidden value=EI>
+      <button id=A type=button class="btn btn-answer mt-3 mb-5 px-4 pt-3 pb-3">선택지 A</button>
+      <button id=B type=button class="btn btn-answer mb-5 pt-3 px-4 pb-3">선택지 B</button>
+
+    </article>
+
+
+    <input type=hidden id=EI value=0>
+    <input type=hidden id=SN value=0>
+    <input type=hidden id=TF value=0>
+    <input type=hidden id=JP value=0>
+
+    <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-601fff2f622dc806"></script>
+    <script src=//t1.daumcdn.net/kas/static/ba.min.js async></script>
+    <script src=https://unpkg.com/swiper/swiper-bundle.min.js></script>
+    <script src=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js integrity=sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx crossorigin=anonymous></script>
+
+    <script src=./assets/js/bg.js></script>
+    <script src=./assets/js/main.js></script>
+    <script src=./assets/js/swiperimg.js></script>
+    <script src=./components/load.js></script>
+    <script>
+      // 페이지 로드 시 첫 번째 질문 로드
+      $(document).ready(function() {
+        console.log("quiz.html 로드됨");
+        console.log("q 객체 존재?", typeof q !== 'undefined');
+        $(".question").show();
+        next();
+      });
+    </script>
+
+  </body>
+</html>
