@@ -475,6 +475,21 @@ var result = {
 
 };
 
+// GitHub Pages 환경에서 이미지 경로 자동 처리
+(function fixImagePaths() {
+  for (var mbti in result) {
+    if (result[mbti].img && !result[mbti].img.startsWith('./')) {
+      result[mbti].img = result[mbti].img.replace('image/', './assets/images/');
+    }
+    for (var i = 1; i <= 5; i++) {
+      var imgKey = 'img' + i;
+      if (result[mbti][imgKey] && !result[mbti][imgKey].startsWith('./')) {
+        result[mbti][imgKey] = result[mbti][imgKey].replace('image/', './assets/images/');
+      }
+    }
+  }
+})();
+
 function start() {
   $(".start").hide();
   $(".result16").hide();
