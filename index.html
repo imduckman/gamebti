@@ -25,6 +25,7 @@
   
 
   <body>
+    <div id="header"></div>
 
     <section class=start>
       <div class=startpage>
@@ -36,6 +37,7 @@
       </div>
     </section>
 
+    <div id="footer"></div>
 
 
     <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-601fff2f622dc806"></script>
@@ -46,6 +48,13 @@
     <script src=./assets/js/bg.js></script>
     <script src=./assets/js/main.js></script>
     <script src=./components/load.js></script>
+    
+    <script>
+      $(function() {
+        $("#header").load("./components/header.html");
+        $("#footer").load("./components/footer.html");
+      });
+    </script>
 
   </body>
 </html>
