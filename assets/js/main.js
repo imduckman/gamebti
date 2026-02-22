@@ -224,7 +224,7 @@ var result = {
   },
 
   "INFP": {
-    "game": "스타듀벨리",
+    "game": "스타듀밸리",
     "explain1": '<i id=quote>“논리는 A에서 B로 갈 수 있게 한다. 상상력은 어디든지 갈 수 있게 한다.”</i> - Albert Einstein<br><br> <span class="highlight">낭만적인 이상주의자</span>는 긍정적이고 상냥한 성격의 이타주의자입니다. 겉으로는 조용하지만 타인을 생각하는 <span class="highlight">배려심</span>이 깊어 남을 지배하거나 경쟁하는 것을 좋아하지 않는 반면, 자유로운 것을 좋아해 상상력이 뛰어나고 <span class="highlight">자신이 하는 일에 의미</span>를 찾고자 하는 경향이 강합니다.<br><br> 이런 성향의 낭만적인 이상주의자에게는 귀농 힐링 게임인 <span class="highlight">스타듀밸리</span>를 추천드립니다. 삭막한 도시를 떠나 자신만의 농장을 가꾸며 마을 주민들과 따뜻한 교감을 나눌 수 있는 게임입니다. 타인과의 경쟁보다는 <span class="highlight">자신만의 속도와 방식</span>으로 평화로운 일상을 만들어가며 정서적 안정을 찾을 수 있습니다. 마을 곳곳에 숨겨진 이야기들을 발견하고 소중한 인연들과 <span class="highlight">깊은 유대감</span>을 쌓으며 당신의 감성을 충전해보세요!<br><br> 이와 비슷한 게임으로 <span class="highlight">썸썸 편의점</span>, <span class="highlight">워킹데드</span>, <span class="highlight">디트로이트:비컴 휴먼</span>, <span class="highlight">더 라스트 오브 어스</span>를 추천드립니다. RPG 요소와 좀 더 많은 상호작용을 원하신다면 <span class="highlight">돈 스타브</span>를 추천드립니다.',
 
     "desc": "낭만적인 이상주의자",
@@ -232,7 +232,57 @@ var result = {
     "genre1": "추천 장르:",
     "genre": "어드벤처, 인디, 캐주얼, MMORPG, ",
     "game-rec1": "추천 게임:",
-    "game-rec": "스타듀벨리, 언더테일, 스타듀벨리, 썸썸 편의점, 워킹데드, 디트로이트:비컴 휴먼, 더 라스트 오브 어스",
+    "game-rec": "스타듀밸리, 언더테일, 스타듀밸   "img1": "image/civilization1.jpg",
+    "img2": "image/lostark.jpg",
+    "img3": "image/final1.jpg",
+    "img4": "image/dongmul.jpg",
+    "img5": "image/ringfit1.jpg",
+  },
+
+
+  "ENTP": {
+    "game": "마인크래프트",
+    "desc": "유쾌한 혁명가",
+    "mbti-type": "ENTP",
+    "genre1": "추천 장르:",
+    "genre": "샌드박스, 오픈월드, 파티 게임",
+    "game-rec1": "추천 게임:",
+    "game-rec": "폴 가이즈, GTA V, 아크 서바이벌, 리그 오브 레전드, 테라리아",
+    "explain1": '<i id=quote>“가시밭길이더라도 자주적 사고를 하는 이의 길을 가십시오.”</i> - Thomas J. Watson<br><br> <span class="highlight">유쾌한 혁명가</span>는 고정관념에 얽매이지 않고 새로운 가능성을 실험하는 것을 즐깁니다. 정해진 규칙대로 게임을 하기보다 "이렇게 하면 어떻게 될까?"라는 호기심으로 시스템을 비틀어보는 개척정신이 강합니다. 때로는 엉뚱한 실험으로 팀원들을 당황하게 만들기도 하지만, 그 창의적인 발상이 불가능해 보이던 상황을 반전시키기도 합니다.<br><br> 이런 성향의 유쾌한 혁명가에게는 <span class="highlight">마인크래프트</span>를 추천합니다. 정해진 목적지 없이 무한한 세상에서 당신이 상상하는 모든 것을 구현할 수 있는 게임입니다. 복잡한 회로 기술인 레드스톤을 활용해 자신만의 시스템을 구축하거나, 누구도 생각지 못한 건축물을 지으며 <span class="highlight">창의적 자유</span>를 만끽해보세요. 이 무한한 모래상자 안에서 당신의 혁명적인 아이디어는 곧 법이 됩니다!<br><br> 이와 비슷한 게임으로는 <span class="highlight">폴 가이즈</span>, <span class="highlight">아크 서바이벌</span>, <span class="highlight">GTA V</span>를 추천드립니다. 경쟁을 즐기신다면 <span class="highlight">리그 오브 레전드</span>에서 새로운 메타를 창시해보는 것도 좋습니다.',
+    "img": "image/minecraft1.jpg",
+    "other-game1": "유쾌한 혁명가들의 <br>인생 게임",
+    "img1": "image/civilization1.jpg", "img2": "image/starcraft1.jpg", "img3": "image/lostark.jpg", "img4": "image/final1.jpg", "img5": "image/ringfit1.jpg"
+  },
+
+  "INFJ": {
+    "game": "파이널 판타지",
+    "explain1": '<i id=quote>"모든 인간은 창의적인 이타주의의 빛 속을 걸을 것인지, 아니면 파괴적인 이기주의의 노선을 걸을 것인지 중 하나를 선택해야 합니다."</i> - Martin Luther King<br><br> <span class="highlight">선의의 선지자</span>는 다소 내향적이나 감성적입니다. 미래에 대한 상상을 좋아하며 다른 사람의 내면을 꿰뚫어보는 재능이 있습니다. 전 세계에 1% 밖에 없는 인류애 넘치는 유형이지만 <span class="highlight">외유내강</span>(外柔內剛) 겉은 부드러워 보이나 안은 누구보다 강인하며, <span class="highlight">질풍경초</span> (疾風勁草) 자신의 신념 앞에서는 모진 바람에도 꺾이지 않는 풀처럼 끝까지 투쟁합니다.<br><br> 이런 성향을 가진 선의의 선지자에게는 <span class="highlight">파이널 판타지</span>를 추천드립니다. 플레이어와 게임 캐릭터 간의 유대관계가 뛰어난 RPG게임입니다. 비디오 게임에서 가장 많은 OST를 가진 게임으로 기네스에 오르기도 한 만큼 플레이어의 귀를 즐겁게 해주며 탄탄한 스토리와 뛰어난 그래픽은 <span class="highlight">실제 판타지 세계에 온 듯한 느낌</span>을 선사합니다. 파이널 판타지에서 현실에선 구현되기 힘들어 꿈꿔 오기만 했던 당신의 <span class="highlight">이상</span>을 이뤄보세요!<br><br> 이와 비슷한 게임으로 <span class="highlight">메이플 스토리</span>와 <span class="highlight">위쳐 3</span>을 추천드리고, 스토리 요소에 좀 더 집중하고 싶으시다면 <span class="highlight">디트로이트: 비컴 휴먼</span>, <span class="highlight">투 더 문</span>, <span class="highlight">더 라스트 오브 어스</span>를 추천드립니다.',
+
+    "desc": "선의의 선지자",
+    "mbti-type": "INFJ",
+    "genre1": "추천 장르:",
+    "genre": "MMORPG, 시뮬레이션, 어드벤쳐, 인디",
+    "game-rec1": "추천 게임:",
+    "game-rec": "파이널 판타지, 메이플스토리, 위쳐 3, 디트로이트: 비컴 휴먼, 투더문, 라스트 오브 어스",
+    "img": "image/final1.jpg",
+    "other-game1": "선의의 선지자들의 <br>인생 게임",
+    "img1": "image/civilization1.jpg",
+    "img2": "image/starcraft1.jpg",
+    "img3": "image/lostark.jpg",
+    "img4": "image/dongmul.jpg",
+    "img5": "image/ringfit1.jpg",
+  },
+
+  "INFP": {
+    "game": "스타듀밸리",
+    "explain1": '<i id=quote>“논리는 A에서 B로 갈 수 있게 한다. 상상력은 어디든지 갈 수 있게 한다.”</i> - Albert Einstein<br><br> <span class="highlight">낭만적인 이상주의자</span>는 긍정적이고 상냥한 성격의 이타주의자입니다. 겉으로는 조용하지만 타인을 생각하는 <span class="highlight">배려심</span>이 깊어 남을 지배하거나 경쟁하는 것을 좋아하지 않는 반면, 자유로운 것을 좋아해 상상력이 뛰어나고 <span class="highlight">자신이 하는 일에 의미</span>를 찾고자 하는 경향이 강합니다.<br><br> 이런 성향의 낭만적인 이상주의자에게는 귀농 힐링 게임인 <span class="highlight">스타듀밸리</span>를 추천드립니다. 삭막한 도시를 떠나 자신만의 농장을 가꾸며 마을 주민들과 따뜻한 교감을 나눌 수 있는 게임입니다. 타인과의 경쟁보다는 <span class="highlight">자신만의 속도와 방식</span>으로 평화로운 일상을 만들어가며 정서적 안정을 찾을 수 있습니다. 마을 곳곳에 숨겨진 이야기들을 발견하고 소중한 인연들과 <span class="highlight">깊은 유대감</span>을 쌓으며 당신의 감성을 충전해보세요!<br><br> 이와 비슷한 게임으로 <span class="highlight">썸썸 편의점</span>, <span class="highlight">워킹데드</span>, <span class="highlight">디트로이트:비컴 휴먼</span>, <span class="highlight">더 라스트 오브 어스</span>를 추천드립니다. RPG 요소와 좀 더 많은 상호작용을 원하신다면 <span class="highlight">돈 스타브</span>를 추천드립니다.',
+
+    "desc": "낭만적인 이상주의자",
+    "mbti-type": "INFP",
+    "genre1": "추천 장르:",
+    "genre": "어드벤처, 인디, 캐주얼, MMORPG, ",
+    "game-rec1": "추천 게임:",
+    "game-rec": "스타듀밸리, 언더테일, 스타듀밸리, 썸썸 편의점, 워킹데드, 디트로이트:비컴 휴먼, 더 라스트 오브 어스",
     "img": "image/stardew.png",
     "other-game1": "낭만적인 이상주의자들의 <br>인생 게임",
     "img1": "image/civilization1.jpg",
