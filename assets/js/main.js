@@ -857,7 +857,7 @@ function fallguysESFJ() {
 
 /* ESFP */
 function justdanceESFP() {
-  window.location.href = '/ESFP/justdance';
+  window.location.href = '/ESFP/fallguys';
 }
 
 function amongusESFP() {
