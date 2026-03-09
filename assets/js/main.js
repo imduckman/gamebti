@@ -312,16 +312,16 @@ var result = {
   },
 
   "ENFP": {
-    "game": "팰월드",
-    "explain1": '<i id=quote>“방황하는 자들이 모두 길을 잃은 것은 아니다.”</i> - J.R.R. Tolkien<br><br> <span class="highlight">즉흥적인 이상가</span>는 사람들과 어울리기를 좋아하며 다양한 분야에 관심이 많습니다. 기존의 것에 얽매이지 않는 <span class="highlight">자유로운 영혼</span>으로 어떠한 환경에서도 쉽게 적응 할 수 있으나 집중력이 부족하고 <span class="highlight">쉽게 질려하는 경향</span>이 있습니다. 또 변화를 두려워하지 않기 때문에 <span class="highlight">위기대처능력</span>이 뛰어납니다. 가끔은 혼자만의 시간을 필요로 해 갑작스럽게 잠수를 타기도 합니다.<br><br> 이런 성향을 가진 즉흥적인 이상가에게는 <span class="highlight">펠월드</span>를 추천드립니다. 드넓은 오픈월드에서 탐험, 건축, 전투, 그리고 수집까지 당신이 원하는 것을 <span class="highlight">그때그때 자유롭게</span> 즐길 수 있는 게임입니다. 정해진 틀 없이 100여 종이 넘는 매력적인 팰들을 포획하고 활용하며, 매 순간 마주하는 새로운 환경에 적응해나가는 재미가 있어 질릴 틈이 없을 것입니다. 변화무쌍한 펠월드에서 당신의 <span class="highlight">즉흥적인 열정</span>을 마음껏 발휘해보세요!<br><br> MMORPG를 선호하신다면 <span class="highlight">메이플스토리</span>를, 위기대처 능력을 시험해보고 싶다면 전략게임인 <span class="highlight">문명VI</span>를, 오픈월드 게임을 선호하신다면 <span class="highlight">GTA V</span>와 <span class="highlight">마인크래프트</span>를, 축구를 좋아 하신다면 <span class="highlight">Football Manager 2021</span>을 추천드립니다.',
+    "game": "포켓몬 레전즈ZA",
+    "explain1": '<i id=quote>“모험은 늘 새로운 만남에서 시작된다.”</i><br><br> <span class="highlight">즉흥적인 이상가</span>는 사람들과 어울리기를 좋아하며 다양한 분야에 관심이 많습니다. 기존의 것에 얽매이지 않는 <span class="highlight">자유로운 영혼</span>으로 어떠한 환경에서도 쉽게 적응 할 수 있으나 집중력이 부족하고 <span class="highlight">쉽게 질려하는 경향</span>이 있습니다. 또 변화를 두려워하지 않기 때문에 <span class="highlight">위기대처능력</span>이 뛰어납니다. 가끔은 혼자만의 시간을 필요로 해 갑작스럽게 잠수를 타기도 합니다.<br><br> 이런 성향을 가진 즉흥적인 이상가에게는 <span class="highlight">포켓몬</span>을 추천드립니다. 각 지역을 자유롭게 탐험하며 새로운 포켓몬을 만나고, 나만의 파티를 구성해 성장시키는 과정은 매 순간 신선한 재미를 줍니다. 취향에 맞는 포켓몬을 수집하고 다양한 전략으로 배틀을 풀어가는 경험은 <span class="highlight">호기심 많고 즉흥적인 성향</span>과 잘 맞습니다. 당신만의 팀으로 여행을 떠나며 <span class="highlight">모험의 설렘</span>을 마음껏 즐겨보세요!<br><br> 이와 비슷한 게임으로는 <span class="highlight">젤다의 전설</span>, <span class="highlight">메이플스토리</span>, <span class="highlight">GTA V</span>, <span class="highlight">마인크래프트</span>, <span class="highlight">풋볼 매니저</span>를 추천드립니다.',
 
     "desc": "즉흥적인 이상가",
     "mbti-type": "ENFP",
     "genre1": "추천 장르:",
     "genre": "MMORPG, eSports, 전략게임",
     "game-rec1": "추천 게임:",
-    "game-rec": "팰월드, GTA V, 풋볼 매니저, 문명, 젤다의 전설, 메이플스토리",
-    "img": "image/pal.jpg",
+    "game-rec": "포켓몬스터, 팰월드, GTA V, 풋볼 매니저, 문명, 젤다의 전설, 메이플스토리",
+    "img": "image/poketmon.jpg",
     "other-game1": "즉흥적인 이상가들의 <br>인생 게임",
     "img1": "image/civilization1.jpg",
     "img2": "image/starcraft1.jpg",
