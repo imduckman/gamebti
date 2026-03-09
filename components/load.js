@@ -1,27 +1,53 @@
-// Load header and footer from separate files
-document.addEventListener('DOMContentLoaded', function() {
-  // Load header
+document.addEventListener('DOMContentLoaded', function () {
+  function toFragment(html) {
+    const template = document.createElement('template');
+    template.innerHTML = html.trim();
+    return template.content.cloneNode(true);
+  }
+
   fetch('./components/header.html')
-    .then(response => response.text())
-    .then(data => {
-      const headerContainer = document.createElement('div');
-      headerContainer.innerHTML = data;
-      document.body.insertBefore(headerContainer.firstElementChild, document.body.firstChild);
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error('Header fetch failed: ' + response.status);
+      }
+      return response.text();
     })
-    .catch(err => console.log('Header load error:', err));
-  
-  // Load footer before copyrightText
-  fetch('./components/footer.html')
-    .then(response => response.text())
-    .then(data => {
-      const footerContainer = document.createElement('div');
-      footerContainer.innerHTML = data;
-      const copyrightText = document.querySelector('.copyrightText');
-      if (copyrightText) {
-        document.body.insertBefore(footerContainer.innerHTML, copyrightText);
-      } else {
-        document.body.appendChild(footerContainer);
+    .then(function (data) {
+      const headerPlaceholder = document.querySelector('#header');
+      if (headerPlaceholder) {
+        headerPlaceholder.innerHTML = data;
+        return;
+      }
+
+      if (!document.querySelector('body > header')) {
+        const headerFragment = toFragment(data);
+        document.body.insertBefore(headerFragment, document.body.firstChild);
       }
     })
-    .catch(err => console.log('Footer load error:', err));
+    .catch(function (err) {
+      console.error('Header load error:', err);
+    });
+
+  fetch('./components/footer.html')
+    .then(function (response) {
+      if (!response.ok) {
+        throw new Error('Footer fetch failed: ' + response.status);
+      }
+      return response.text();
+    })
+    .then(function (data) {
+      const footerPlaceholder = document.querySelector('#footer');
+      if (footerPlaceholder) {
+        footerPlaceholder.innerHTML = data;
+        return;
+      }
+
+      if (!document.querySelector('body > footer')) {
+        const footerFragment = toFragment(data);
+        document.body.appendChild(footerFragment);
+      }
+    })
+    .catch(function (err) {
+      console.error('Footer load error:', err);
+    });
 });
