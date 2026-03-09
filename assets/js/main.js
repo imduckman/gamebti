@@ -456,7 +456,7 @@ var result = {
 
   "ESFP": {
     "game": "폴 가이즈",
-    "explain1": '<i id=quote>“내일은 내일의 태양이 뜬다.”</i> - Margaret Mitchell<br><br> <span class="highlight">최고의 엔터테이너</span>는 사람들의 관심을 한 몸에 받는 것을 즐기며 미래를 생각하기보다 <span class="highlight">매 순간 즐거움</span>을 찾는 단순한 면모를 가지고 있습니다. 계산된 행동이 아닌 순수한 호감으로 사람들에게 다가가기 때문에 주변 사람들에게 인기가 많습니다. 또 경쟁보다는 모두가 어우러져 서로를 응원하고 즐기는 <span class="highlight">밝은 분위기</span>를 좋아합니다.<br><br> 이런 성향을 가진 최고의 엔터테이너에게는 파티게임인 <span class="highlight">저스트 댄스</span>를 추천드립니다. 곡을 선택 한 후 자신이 선택한 댄서의 동작을 보며 따라하는 댄스게임으로 파티게임 중 가장 인기가 많은 게임입니다. 친구들과 함께 모인 자리에서 <span class="highlight">분위기를 업</span> 시켜 <span class="highlight">끼와 매력</span>을 마음껏 발산시켜보세요!<br><br> 온라인에서 즐길 수 있는 파티형 게임으로는 <span class="highlight">어몽어스</span>와 <span class="highlight">폴가이즈</span>를 추천드리며 가볍게 즐길 수 있는 게임을 선호하신다면 <span class="highlight">슈퍼 스매시 브라더스</span>와 <span class="highlight">마리오 파티</span>를, 슈팅 게임을 좋아하신다면 <span class="highlight">콜 오브 듀티</span>를 추천드립니다.',
+    "explain1": '<i id=quote>“내일은 내일의 태양이 뜬다.”</i> - Margaret Mitchell<br><br> <span class="highlight">최고의 엔터테이너</span>는 사람들의 관심을 한 몸에 받는 것을 즐기며 미래를 생각하기보다 <span class="highlight">매 순간 즐거움</span>을 찾는 단순한 면모를 가지고 있습니다. 계산된 행동이 아닌 순수한 호감으로 사람들에게 다가가기 때문에 주변 사람들에게 인기가 많습니다. 또 경쟁보다는 모두가 어우러져 서로를 응원하고 즐기는 <span class="highlight">밝은 분위기</span>를 좋아합니다.<br><br> 이런 성향을 가진 최고의 엔터테이너에게는 파티게임인 <span class="highlight">폴 가이즈</span>를 추천드립니다. 폴가이즈는 무료 크로스 플랫폼, 대규모 멀티플레이어 파티 로얄 게임입니다. 친구들과 함께 우스꽝스러운 장애물 코스에서 어설프게 경쟁하거나 엄청나게 혼란스러운 나만의 코스를 만들어 커뮤니티와 공유할 수 있습니다. <br><br> 온라인에서 즐길 수 있는 파티형 게임으로는 <span class="highlight">어몽어스</span>와 <span class="highlight">폴가이즈</span>를 추천드리며 가볍게 즐길 수 있는 게임을 선호하신다면 <span class="highlight">슈퍼 스매시 브라더스</span>와 <span class="highlight">마리오 파티</span>를, 슈팅 게임을 좋아하신다면 <span class="highlight">콜 오브 듀티</span>를 추천드립니다.',
 
     "desc": "최고의 엔터테이너",
     "mbti-type": "ESFP",
@@ -464,7 +464,7 @@ var result = {
     "genre": "파티, 댄스, 리듬, 슈팅",
     "game-rec1": "추천 게임:",
     "game-rec": "어몽어스, 폴가이즈, 슈퍼 스매시 브라더스, 마리오 파티, 콜오브듀티",
-    "img": "image/minecraft1.jpg",
+    "img": "image/fallguys.jpg",
     "other-game1": "최고의 엔터테이너들의 <br>인생 게임",
     "img1": "image/civilization1.jpg",
     "img2": "image/starcraft1.jpg",
